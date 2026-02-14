@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Mobile-First Viewport: Supports all devices including notched phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Kavitha M - First-Year MERN Stack Developer Portfolio showcasing web development projects and skills">
+    <meta name="keywords" content="web developer, MERN stack, portfolio, frontend developer, student">
+    <meta name="author" content="Kavitha M">
+    <!-- Mobile App Appearance -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#7C3AED" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0F0E17" media="(prefers-color-scheme: dark)">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Kavitha M | Web Developer Portfolio">
+    <meta property="og:description" content="First-Year MERN Stack Developer passionate about building beautiful web experiences">
+    <meta property="og:type" content="website">
+    
+    <title>Kavitha M | Web Developer Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="images/Kavi.jpg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__spinner"></div>
+        <span class="preloader__text">Loading...</span>
+    </div>
+    
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <!-- Skip to Main Content -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a href="#hero" class="nav__logo">Kavitha M</a>
+            
+            <!-- Dark Mode Toggle -->
+            <button 
+                class="theme-toggle" 
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+                title="Toggle dark/light mode"
+            >
+                <svg class="theme-toggle__icon theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+                <svg class="theme-toggle__icon theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                </svg>
+            </button>
+            
+            <button 
+                class="nav__toggle" 
+                id="navToggle" 
+                aria-expanded="false" 
+                aria-controls="navMenu"
+                aria-label="Toggle navigation menu"
+            >
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav__menu" id="navMenu" role="menubar">
+                <li role="none"><a href="#hero" class="nav__link" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" class="nav__link" role="menuitem">About</a></li>
+                <li role="none"><a href="#projects" class="nav__link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#skills" class="nav__link" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#contact" class="nav__link" role="menuitem">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero" id="hero" aria-labelledby="hero-heading">
+            <!-- Floating Particles -->
+            <div class="particles" aria-hidden="true">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <span class="hero__greeting">Hi, I'm</span>
+                    <h1 class="hero__name" id="hero-heading">Kavitha M</h1>
+                    <p class="hero__tagline">CSE Student at SRCEC, Coimbatore | Aspiring MERN Stack Developer</p>
+                    <p class="hero__description">
+                        First-year Computer Science Engineering student passionate about web development. 
+                        Currently learning and growing one project at a time.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#projects" class="btn btn--primary">View My Work</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <div class="hero__image-wrapper">
+                        <img 
+                            src="images/Kavi.jpg" 
+                            alt="Kavitha M - Web Developer" 
+                            class="hero__photo"
+                            loading="eager"
+                        >
+                        <div class="hero__image-ring"></div>
+                        <div class="hero__image-ring hero__image-ring--delayed"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__scroll">
+                <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+                    <span class="scroll-indicator__mouse"></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title" id="about-heading">About Me</h2>
+                    <div class="section__accent"></div>
+                </div>
+                <div class="about__content">
+                    <p class="about__text">
+                        I'm Kavitha M, a first-year Computer Science Engineering student at 
+                        Sri Ramakrishna College of Engineering, Coimbatore, Tamil Nadu. My passion for 
+                        technology drives me to explore the world of web development and build meaningful digital experiences.
+                    </p>
+                    <p class="about__text">
+                        Currently a beginner learning the MERN stack (MongoDB, Express.js, React, Node.js) 
+                        and web development fundamentals. I'm excited to grow my skills and create impactful 
+                        projects as I progress through my engineering journey.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects section" id="projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title" id="projects-heading">My Projects</h2>
+                    <p class="section__subtitle">A selection of work I'm proud of</p>
+                    <div class="section__accent"></div>
+                </div>
+                <div class="projects__grid">
+                    <!-- Project 1 -->
+                    <article class="project-card" aria-labelledby="project-1-title">
+                        <div class="project-card__image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpGaLoq-hnS_Vy3Gry2eiCy-iUzzQH8TR8nQ&s" alt="Portfolio Website Preview" class="project-card__img">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title" id="project-1-title">Responsive Developer Portfolio</h3>
+                            <p class="project-card__description">
+                                A modern and fully responsive personal portfolio website with clean UI design, 
+                                structured semantic markup, and smooth user interaction. Optimized for both desktop and mobile devices.
+                            </p>
+                            <div class="project-card__tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card" aria-labelledby="project-2-title">
+                        <div class="project-card__image">
+                            <img src="images/hybrid.png" alt="Security System Preview" class="project-card__img">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title" id="project-2-title">Secure MFA System</h3>
+                            <p class="project-card__description">
+                                A conceptual secure multi-factor authentication system using hybrid cryptography. 
+                                Combines symmetric and asymmetric encryption to protect credentials and ensure secure key exchange.
+                            </p>
+                            <div class="project-card__tech">
+                                <span class="tech-badge">Cryptography</span>
+                                <span class="tech-badge">Security</span>
+                                <span class="tech-badge">Authentication</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section" id="skills" aria-labelledby="skills-heading">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title" id="skills-heading">Skills & Technologies</h2>
+                    <div class="section__accent"></div>
+                </div>
+                <div class="skills__content">
+                    <div class="skills__category">
+                        <h3 class="skills__category-title">Technical Skills</h3>
+                        <div class="skills__list">
+                            <div class="skill-item">
+                                <div class="skill-item__header">
+                                    <span class="skill-item__name">HTML5</span>
+                                    <span class="skill-item__percentage">50%</span>
+                                </div>
+                                <div class="skill-item__bar">
+                                    <div class="skill-item__progress skill-item__progress--learning" style="--progress: 50%"></div>
+                                </div>
+                                <span class="skill-item__badge">Learning</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__header">
+                                    <span class="skill-item__name">CSS3 / Flexbox / Grid</span>
+                                    <span class="skill-item__percentage">45%</span>
+                                </div>
+                                <div class="skill-item__bar">
+                                    <div class="skill-item__progress skill-item__progress--learning" style="--progress: 45%"></div>
+                                </div>
+                                <span class="skill-item__badge">Learning</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__header">
+                                    <span class="skill-item__name">JavaScript ES6+</span>
+                                    <span class="skill-item__percentage">35%</span>
+                                </div>
+                                <div class="skill-item__bar">
+                                    <div class="skill-item__progress skill-item__progress--learning" style="--progress: 35%"></div>
+                                </div>
+                                <span class="skill-item__badge">Learning</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__header">
+                                    <span class="skill-item__name">React</span>
+                                    <span class="skill-item__percentage">20%</span>
+                                </div>
+                                <div class="skill-item__bar">
+                                    <div class="skill-item__progress skill-item__progress--learning" style="--progress: 20%"></div>
+                                </div>
+                                <span class="skill-item__badge">Learning</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__header">
+                                    <span class="skill-item__name">Node.js</span>
+                                    <span class="skill-item__percentage">15%</span>
+                                </div>
+                                <div class="skill-item__bar">
+                                    <div class="skill-item__progress skill-item__progress--learning" style="--progress: 15%"></div>
+                                </div>
+                                <span class="skill-item__badge">Learning</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__header">
+                                    <span class="skill-item__name">MongoDB</span>
+                                    <span class="skill-item__percentage">15%</span>
+                                </div>
+                                <div class="skill-item__bar">
+                                    <div class="skill-item__progress skill-item__progress--learning" style="--progress: 15%"></div>
+                                </div>
+                                <span class="skill-item__badge">Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills__category">
+                        <h3 class="skills__category-title">Soft Skills</h3>
+                        <div class="skills__tags">
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Team Collaboration</span>
+                            <span class="skill-tag">Quick Learner</span>
+                            <span class="skill-tag">Attention to Detail</span>
+                            <span class="skill-tag">Time Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title" id="contact-heading">Let's Connect</h2>
+                    <p class="section__subtitle">
+                        I'm always open to discussing new opportunities, collaborations, or just chatting about tech!
+                    </p>
+                    <div class="section__accent"></div>
+                </div>
+                <div class="contact__content">
+                    <form class="contact__form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" aria-labelledby="contact-heading">
+                        <input type="hidden" name="access_key" value="9a8dc722-f2e5-4beb-bcaf-2fc3df1e4487">
+                        <input type="hidden" name="subject" value="New Portfolio Contact Message">
+                        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name <span aria-hidden="true">*</span></label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form-input" 
+                                required
+                                aria-required="true"
+                                aria-describedby="name-error"
+                                placeholder="Your name"
+                            >
+                            <span class="form-error" id="name-error" role="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email <span aria-hidden="true">*</span></label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                required
+                                aria-required="true"
+                                aria-describedby="email-error"
+                                placeholder="your.email@example.com"
+                            >
+                            <span class="form-error" id="email-error" role="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message <span aria-hidden="true">*</span></label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form-input form-textarea" 
+                                rows="5"
+                                required
+                                aria-required="true"
+                                aria-describedby="message-error"
+                                placeholder="Your message..."
+                            ></textarea>
+                            <span class="form-error" id="message-error" role="alert"></span>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">
+                            <span class="btn__text">Send Message</span>
+                            <span class="btn__loader" aria-hidden="true"></span>
+                        </button>
+                        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+                            Thank you! Your message has been sent successfully.
+                        </div>
+                    </form>
+                    <div class="contact__info">
+                        <h3 class="contact__info-title">Get in Touch</h3>
+                        <p class="contact__info-text">
+                            Have a question or want to work together? Drop me a message!
+                        </p>
+                        <div class="contact__links">
+                            <a href="mailto:kavitha.2501111@srec.ac.in" class="contact__link" aria-label="Send email to Kavitha">
+                                <span class="contact__link-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                </span>
+                                <span class="contact__link-text">kavitha.2501111@srec.ac.in</span>
+                            </a>
+                            <a href="https://github.com/kavitham" class="contact__link" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile">
+                                <span class="contact__link-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </span>
+                                <span class="contact__link-text">GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2026 Kavitha M. All rights reserved.</p>
+            <p class="footer__tagline">First-Year CSE Student | Learning & Building</p>
+        </div>
+        <button class="back-to-top" id="backToTop" aria-label="Back to top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+            </svg>
+        </button>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
